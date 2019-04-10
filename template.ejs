@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= htmlWebpackPlugin.options.title %></title>
+    </head>
+    <body>
+        <% if (htmlWebpackPlugin.options.appMountId) { %>
+        <div id="<%= htmlWebpackPlugin.options.appMountId%>"></div>
+        <% } %>
+    </body>
+    <!-- <script src="build/app.bundle.js"></script> -->
+</html>
