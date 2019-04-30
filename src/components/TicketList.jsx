@@ -5,28 +5,33 @@ var masterTicketList = [
   {
     names: 'Thato and Haley',
     location: '3A',
-    issue: 'Firebase won\'t save record. Halp.'
+    issueX: 'Firebase won\'t save record. Halp.'
   },
   {
     names: 'Sleater and Kinney',
     location: '4B',
-    issue: 'Fox image not displaying on page, can only see duck?'
+    issueX: 'Fox image not displaying on page, can only see duck?'
   },
   {
     names: 'Imani & Jacob',
     location: '9F',
-    issue: 'Donkey picture not displaying on hover.'
+    issueX: 'Donkey picture not displaying on hover.'
   }
 ];
 function TicketList() {
   return (
     <div>
+      <style global jsx>{`
+        div {
+          font-size: 20px;
+        }
+      `}</style>
       <hr />
       {masterTicketList.map((ticket, index) => (
         <Ticket
           names={ticket.names}
           location={ticket.location}
-          issue={ticket.issue}
+          issue={ticket.issueX}
           key={index} />
       ))}
     </div>

@@ -15,7 +15,7 @@ module.exports = {
     publicPath: '/'
   },
   resolve: {
-    extensions: [ '.js', '.jsx' ]
+    extensions: ['.js', '.jsx']
   },
   devtool: '#source-map',
   devServer: {
@@ -41,8 +41,18 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          presets: [ [ 'es2015', { modules: false } ], 'react' ],
-          plugins: [ 'react-hot-loader/babel', 'styled-jsx/babel' ]
+          presets: [['es2015', { modules: false }], 'react'],
+          plugins: ['react-hot-loader/babel', 'styled-jsx/babel']
+        }
+      },
+      {
+        test: /\.(png|gif|jp(e*)g|svg)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 8000,
+            name: 'image/[hash]-[name].[ext]'
+          }
         }
       }
     ]
