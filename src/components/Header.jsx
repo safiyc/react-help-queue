@@ -12,9 +12,10 @@ function Header() {
     <div>
       <style jsx>{`
         h1 {
-          border: 2px solid black;
-          border-bottom: 5px solid black;
-          margin-top: 0;
+          border: 1px solid black;
+          border-bottom: 6px solid black;
+          border-radius: 10px 10px 80px 80px;
+          margin-top: -8px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -25,7 +26,6 @@ function Header() {
         img {
           width: 50px;
           height: 50px;
-          opacity: .65;
         }
         .nav-links {
           text-align: right;

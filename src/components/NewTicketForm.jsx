@@ -11,7 +11,7 @@ function NewTicketForm() {
         }
         input, textarea {
           margin: 3px auto;
-          width: 80%;
+          width: 400px;
         }
         button {
           width: 70px;
