@@ -21,12 +21,13 @@ var masterTicketList = [
 function TicketList() {
   return (
     <div>
-      <style global jsx>{`
+      <style jsx>{`
         div {
-          font-size: 20px;
+          width: 90%;
+          margin: 0 auto;
         }
       `}</style>
-      <hr />
+      <h2>In The Queue</h2>
       {masterTicketList.map((ticket, index) => (
         <Ticket
           names={ticket.names}

@@ -8,8 +8,15 @@ import Error404 from './Error404';
 function App() {
   return (
     <div>
+      <style jsx global>{`
+        body {
+          overflow-y: scroll;
+        }
+        h2 {
+          text-align: center;
+        }
+      `}</style>
       <Header />
-      {/* <TicketList /> */}
       <Switch>
         <Route exact path='/' component={TicketList} />
         <Route path='/newticket' component={NewTicketForm} />

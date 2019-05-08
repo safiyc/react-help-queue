@@ -5,16 +5,15 @@ function Ticket(props) {
   return (
     <div>
       <style jsx global>{`
-        div {
-          background-color: green;
-        }
         h3 {
-          color: blue;
+          color: black;
+          margin-bottom: 4px;
         }
       `}</style>
       <style jsx>{`
         p {
-          background: purple;
+          margin-top: 0;
+          padding-left: 10px;
         }
       `}</style>
       <h3>
