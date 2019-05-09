@@ -1,15 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function NewTicketForm() {
+function NewTicketForm(props) {
   let _names = null;
   let _location = null;
   let _issue = null;
 
   function handleNewTicketFormSubmission(e) {
     e.preventDefault();
-    console.log(_names.value);
-    console.log(_location.value);
-    console.log(_issue.value);
+    props.onNewTicketCreation({ names: _names.value, location: _location.value, issue: _issue.value });
     _names.value = '';
     _location.value = '';
     _issue.value = '';
@@ -33,7 +32,7 @@ function NewTicketForm() {
           margin: 10px auto
         }
       `}</style>
-      <h2>Create a Ticket</h2>
+      {/* <h2>Create a Ticket</h2> */}
       <form onSubmit={handleNewTicketFormSubmission}>
         <input
           type="text"
@@ -55,4 +54,7 @@ function NewTicketForm() {
   );
 }
 
+NewTicketForm.propTypes = {
+  onNewTicketCreation: PropTypes.func
+};
 export default NewTicketForm;

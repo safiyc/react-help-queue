@@ -8,12 +8,13 @@ function Ticket(props) {
         h3 {
           color: black;
           margin-bottom: 4px;
+          padding-left: 15px;
         }
       `}</style>
       <style jsx>{`
         p {
           margin-top: 0;
-          padding-left: 10px;
+          padding-left: 15px;
         }
       `}</style>
       <h3>

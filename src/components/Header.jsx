@@ -12,9 +12,10 @@ function Header() {
     <div>
       <style jsx>{`
         h1 {
+          height: 80px;
           border: 1px solid black;
-          border-bottom: 6px solid black;
-          border-radius: 10px 10px 80px 80px;
+          border-bottom: 4px solid black;
+          border-radius: 10px 10px 15px 15px;
           margin-top: -8px;
           display: flex;
           justify-content: center;
@@ -31,12 +32,18 @@ function Header() {
           text-align: right;
           padding-right: 10px;
         }
+        #header-bottom {
+          max-width: 1100px;
+          margin: 0 auto;
+        }
       `}</style>
       <h1><img src={infoIcon} />Help Queue!</h1>
-      <div className="nav-links">
-        <Link to="/" style={linksStyle}>Home</Link> | <Link to="/newticket" style={linksStyle}>Create Ticket</Link>
+      <div id="header-bottom">
+        <div className="nav-links">
+          <Link to="/" style={linksStyle}>Home</Link> | <Link to="/newticket" style={linksStyle}>Create Ticket</Link>
+        </div>
+        <hr />
       </div>
-      <hr />
     </div>
   );
 }
