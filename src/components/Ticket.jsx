@@ -23,6 +23,7 @@ function Ticket(props) {
       <p>
         <em>{props.issue}</em>
       </p>
+      <p>{props.scTest}</p>
       <hr />
     </div>
   );
@@ -32,7 +33,8 @@ function Ticket(props) {
 Ticket.propTypes = {
   names: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  issue: PropTypes.string
+  issue: PropTypes.string,
+  scTest: PropTypes.string
 };
 
 export default Ticket;
